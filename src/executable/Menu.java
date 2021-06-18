@@ -1,5 +1,6 @@
 package src.executable;
 import src.players.ArrayPlayers;
+import src.board.Panel;
 import java.util.*;
 
 public class Menu {
@@ -15,16 +16,17 @@ public class Menu {
         return option;
     }
     public void start() {
-        int option;
-        do{
+        int option=0;
+        while(option!=-1){
             System.out.println("  Main Menu");
             System.out.println("1. Add new player");
             System.out.println("2. See player list");
+            System.out.println("3. Print board");
             System.out.println("-1. Exit");
             option = getOption("Enter the option:  ");
             selectMenu(option);
 
-        }while(option!=-1);
+        }
     }
     public void selectMenu(int option) {
         if(option == 1) {
@@ -32,6 +34,10 @@ public class Menu {
         }
         if(option == 2){
             p.seePlayers();
+        }
+        if(option ==3){
+            Panel p = new Panel();
+            p.printBoard();
         }
 
     }
