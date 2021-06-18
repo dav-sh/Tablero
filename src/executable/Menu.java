@@ -1,0 +1,38 @@
+package src.executable;
+import src.players.ArrayPlayers;
+import java.util.*;
+
+public class Menu {
+    private ArrayPlayers p = new ArrayPlayers();
+    Scanner scanner = new Scanner(System.in);
+    public Menu() {
+        start();
+    }
+    private int getOption(String text) {
+        System.out.println(text);
+        int option = scanner.nextInt();
+        scanner.nextLine();
+        return option;
+    }
+    public void start() {
+        int option;
+        do{
+            System.out.println("  Main Menu");
+            System.out.println("1. Add new player");
+            System.out.println("2. See player list");
+            System.out.println("-1. Exit");
+            option = getOption("Enter the option:  ");
+            selectMenu(option);
+
+        }while(option!=-1);
+    }
+    public void selectMenu(int option) {
+        if(option == 1) {
+            p.addPlayer();
+        }
+        if(option == 2){
+            p.seePlayers();
+        }
+
+    }
+}
