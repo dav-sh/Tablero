@@ -7,7 +7,7 @@ public class Menu {
     private ArrayPlayers p = new ArrayPlayers();
     Scanner scanner = new Scanner(System.in);
     public Menu() {
-        start();
+        //clear
     }
     private int getOption(String text) {
         System.out.println(text);
@@ -16,17 +16,17 @@ public class Menu {
         return option;
     }
     public void start() {
-        int option=0;
-        while(option!=-1){
+        int option;
+        do{
             System.out.println("  Main Menu");
             System.out.println("1. Add new player");
             System.out.println("2. See player list");
             System.out.println("3. Print board");
-            System.out.println("-1. Exit");
+            System.out.println("0. Exit");
             option = getOption("Enter the option:  ");
             selectMenu(option);
-
-        }
+            
+        }while(option!=0);
     }
     public void selectMenu(int option) {
         if(option == 1) {
@@ -39,6 +39,7 @@ public class Menu {
             Panel p = new Panel();
             p.printBoard();
         }
+        
 
     }
 }

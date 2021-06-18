@@ -4,8 +4,8 @@ public class Principal{
     public static void main(String[] args){
         Principal m = new Principal();
     }
-    private Menu menu = new Menu();
     public Principal(){
+        Menu menu = new Menu();
         menu.start();
     }
 }

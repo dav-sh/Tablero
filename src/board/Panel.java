@@ -6,11 +6,13 @@ public class Panel {
         //vacio
     }
     public void printBoard() {
+        System.out.println(" ");
         for (int i=0; i<rows; i++) {  //row
             for (int j=0; j<columns; j++){ //column
                 if(i%2==0){ //par row
                     if(j%2==0){ //par column
                         Box b = new Box();
+                        //System.out.print(b.color(5)+b.getCell()+b.color(0));
                         System.out.print(b.getCell());
                     }else{ //odd column
                         Box c = new Box();
@@ -29,5 +31,9 @@ public class Panel {
             }System.out.println(" ");
 
         }
+        System.out.println(" ");
+
     }
+
+
 }

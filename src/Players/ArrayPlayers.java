@@ -18,10 +18,10 @@ public class ArrayPlayers{
         String name = getString("Enter the name of the player: " );
         if(idCounter<5){
             players[idCounter]=new Player((idCounter+1),name);
-            System.out.println("Successfully added");
+            System.out.println("\n\nSuccessfully added\n\n");
             idCounter++;
         }else{
-            System.out.println(" No more players can be added ...");
+            System.out.println("\n\nNo more players can be added ...\n\n");
         }
     }
     public void seePlayers(){

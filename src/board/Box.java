@@ -33,7 +33,7 @@ public class Box {
         this.cell = cell;
     }
     public String color(int op) {
-        String color = colors[op];
-        return color;
+        
+        return colors[op];
     }
 }
